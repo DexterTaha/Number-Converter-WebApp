@@ -1,50 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
     text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 25px;
+    color: #343a40;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .converter {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
-
-label {
+.input-group label {
     display: block;
-    margin-bottom: 5px;
-    color: #555;
+    margin-bottom: 8px;
+    color: #495057;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
     font-size: 16px;
-    color: #333;
+    color: #495057;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    border-color: #80bdff;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 input::placeholder {
-    color: #aaa;
+    color: #adb5bd;
+}
+
+.copyright-content {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.copyright-content a {
+    color: #007bff;
+    text-decoration: none; 
+}
+
+.copyright-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
